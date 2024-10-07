@@ -1,0 +1,192 @@
+
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+/* <--------------------------------------------------------------------------ESTILOS PORFOLIO--------------------------------------------------------------------------------------------->*/
+/* <--------------------------------------------------------------------------ESTILOS BLOQUE EXPERENCIENCIA--------------------------------------------------------------------------------------------->*/
+
+
+.textoUno{
+    h2{
+        text-align: center;
+        font-family: $font-base;
+        color: $tercer-color;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    p{
+        text-align: center;
+        width: 85%;
+        color: $primary-color;
+        margin-left: 30px;
+        font-family: $font-alt;
+
+    }
+}
+.bloqueExp{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+
+
+    .exp {
+        display: flex; 
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+
+        background-color: $light-color; 
+        padding: 10px;
+        color: $primary-color;
+        font-family: $font-base; 
+        text-align: center;
+        border-radius: 10%;
+        img{                 
+            width: 100%;  
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        .imgDesktop {
+            display: none;
+            
+             
+        }
+
+        .texto2 {
+            background-color: $light-color;
+            color: $primary-color; 
+            font-family: $font-base; 
+            line-height: 1.6; 
+            border-radius: 10px; 
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 50px;
+            h2 {
+                font-size: 1.5em; 
+                color: $secondary-color;
+                margin-bottom: 30px; 
+                background-color: $light-color;
+                text-align: center;
+                font-family: $font-base;
+                margin: 0 10px; 
+                font-weight: bold;  
+ 
+                
+            }
+            p{
+                font-size: 1em;
+                text-align: center; 
+                font-family: $font-alt;
+                margin-top: 40px;
+                color: $tercer-color;
+
+            }
+        }
+
+    }
+}
+
+
+
+/* <--------------------------------------------------------------------------MEDIAQUERY DESKTOP PORTFOLIO--------------------------------------------------------------------------------------------->*/
+
+@include desktop {
+    .textoUno{
+        h2{
+            font-weight: bold;
+        }
+        p{
+            font-size: 1.4em;
+            width: 50%;
+            margin-left: 25%;
+        }
+    }
+    .bloqueExp {
+        .exp {
+            flex-direction: row; 
+            text-align: center;
+            height: 500px;
+            margin-right: 50px;
+            justify-content: right; 
+            .imgDesktop{
+                display: block;  
+                max-width: 600px;  
+                object-fit: contain;
+                margin-right: 20px;
+                margin-left: 50px;
+                width: 100%;
+            }
+            .imgMobile {
+                display: none;              
+            }
+                
+            .texto2 {
+                max-width: 70%;
+                
+                h2 {
+                    font-size: 2em;
+                    margin-bottom: 50px;
+                    width: 80%;
+                    text-align: center;
+                    margin-left: 50px;
+                    color: $secondary-color;
+                }
+                
+                p {
+                    font-size: 1.2em;
+                    width: 100%;
+                    
+                }
+            }       
+        }
+    }
+}/* <-------------------------------------------------------------------------MEDIAQUERY TABLET PORTFOLIO--------------------------------------------------------------------------------------------->*/
+    
+@include tablet {
+    .textoUno {
+        h2 {
+            font-size: 2em;
+        }
+        p{
+            font-size: 1.5em;  
+        }    
+    }
+    .bloqueExp {
+        .exp {
+            flex-direction: column; 
+            align-items: center;
+            height: auto;
+            .imgDesktop {
+                display: none;
+            }
+            .imgMobile {
+                display: block;
+                max-width: 90%;
+                height: auto;
+            }
+    
+            .texto2 {
+                max-width: 90%;
+                margin-left: 0;
+                margin-top: 20px;
+    
+                h2 {
+                    font-size: 2em;
+                    margin-bottom: 15px;
+                }
+    
+                h3 {
+                    font-size: 20px;
+                    margin-right: 0;
+                }
+                p{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}

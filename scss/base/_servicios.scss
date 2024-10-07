@@ -1,0 +1,204 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+/* <-------------------------------------------------------------------------ESTILOS HTL DE SERVICIOS-------------------------------------------------------------------------------------------->*/
+/* <-------------------------------------------------------------------------ESTILOS TEXTOSERVICIO------------------------------------------------------------------------------------------->*/
+
+.textoServicio {
+    h2 {
+        font-size: 3em;
+        color: $tercer-color;
+        text-align: center;
+        margin-bottom: 5px; 
+        border-bottom: 2px solid #e0e0e0; 
+        padding-bottom: 10px;
+        font-family: $font-base;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    h3 {
+        display: none;
+        font-weight: bold;
+        font-size: 2em;
+        color: $secondary-color;
+        margin-bottom: 25px;
+        margin-top: 10px;
+        background-color: $light-color;
+        text-align: center;
+        font-family: $font-base;
+        
+    }
+    p {
+        font-size: 1.1em; 
+        margin: 20px 20px;
+        text-align: center;
+        font-family: $font-alt;
+        color: $primary-color;    
+    }
+}
+/* <-------------------------------------------------------------------------ESTILOS TITULOSERVICIO-------------------------------------------------------------------------------------------->*/
+
+.tituloServicio {
+
+    h3 {
+        font-size: 2em;
+        color: $secondary-color;
+        margin-bottom: 25px;
+        margin-top: 15px;
+        background-color: $light-color;
+        text-align: center;
+        font-family:$font-base; 
+        font-weight: bold;
+}
+}
+
+/* <-------------------------------------------------------------------------ESTILOS CONTENEDORSERVICIOS-------------------------------------------------------------------------------------------->*/
+
+.contenedorServicios {
+    height: 1000vh;
+    background-color: $light-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 40px;
+    }
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY DESKTOP HTML SERVICIOS-------------------------------------------------------------------------------------------->*/
+
+@include desktop{
+    .tituloServicio {
+        display: none; 
+    }
+    .textoServicio {
+        width: 100%; 
+        text-align: left;
+        h2 {
+            width: 100%; 
+            text-align: center;
+            margin-top: 15px;           
+            font-size: 2em;
+            font-weight: bold;  
+ 
+        }
+        h3 {
+            width: 70%;
+            display: block; 
+            font-size: 2.5em;
+            color: $secondary-color;
+            margin-bottom: 15px;
+            font-family: $font-base;
+            font-weight: bold;
+        }
+        p {
+            width: 70%;
+            margin-left: 0;
+            text-align: center;
+            padding: 5px;
+            margin-right: 70px;
+            
+            
+        }
+    }
+    .contenedorServicios {
+        background-color: $light-color;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; 
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        .servicioUno, .servicioDos, .servicioTres, .servicioCuatro, .servicioCinco, .servicioSeis {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem; 
+            align-items: right;
+            width: 100%;
+        }
+        img {
+            width: 400px; 
+            height: 50%;
+            object-fit: contain;
+            justify-content: left;
+            margin-left: 20px;
+        }
+    }
+}    
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET HTML SERVICIOS-------------------------------------------------------------------------------------------->*/
+    
+@include tablet {
+    .tituloServicio {
+        display: none;
+    }
+    
+    .textoServicio {
+        width: 100%;
+        text-align: center;
+        
+        h2 {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        h3 {
+            display: block;
+            text-align: center;
+            font-size: 2em;
+            width: 80%;
+            color: $secondary-color;
+            margin-bottom: 15px;
+            font-family: $font-base;
+            margin-left: 70px;
+        }
+    
+        p {
+            width: 80%;
+            margin-left: 60px;
+            text-align: center;
+            justify-content: center;
+            
+            font-size: 1.5em;
+            color: $primary-color;
+        }
+    }
+    
+    .contenedorServicios {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    
+        .servicioUno, .servicioDos, .servicioTres, .servicioCuatro, .servicioCinco, .servicioSeis {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            align-items: center;
+        }
+    
+        img {
+            width: 60%;
+            height: auto;
+            object-fit: contain;
+            justify-content: left;
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+

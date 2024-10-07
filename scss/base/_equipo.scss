@@ -1,0 +1,144 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* <-------------------------------------------------------------------------eSTILOS MIENBROS DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+/* <-------------------------------------------------------------------------ESTILOS CLASS TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+
+.textoMiembro {
+    background-color: $light-color;
+   
+    font-family: $font-base; 
+    line-height: 1.6; 
+    max-width: 800px;
+    border-radius: 10px; 
+    text-align: center;
+/* <-------------------------------------------------------------------------ESTILOS H2 TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+    
+    h2 {
+        font-size: 2em;
+        color: $tercer-color;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        border-bottom: 2px solid #e0e0e0; 
+        padding-bottom: 10px;
+        font-family: $font-base;
+        font-weight: bold;
+        opacity: 90%;
+          
+    }
+/* <-------------------------------------------------------------------------ESTILOS H3 TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+    
+    h3{
+        font-size: 2em;
+        color:$secondary-color;
+
+    }
+/* <-------------------------------------------------------------------------ESTILOS ETIQUETA P TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+    
+    p{  
+        font-size: 20px;
+        color:$primary-color;
+        font-family: $font-alt;
+        
+        
+
+
+
+    }
+}
+/* <-------------------------------------------------------------------------TITULO OCULTO PARA MOBILE--------------------------------------------------------------------------------------------->*/
+
+.tituloMiembro{
+    display: none;
+}
+/* <-------------------------------------------------------------------------ESTILOS MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+
+.miembro {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-color; 
+    margin-bottom: 20px;
+    font-family: $font-base;  
+/* <-------------------------------------------------------------------------ESTILOS IMG MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+    
+    img {
+        width: 100%; 
+        height: auto; 
+        object-fit: contain;
+        margin-right: 3.125rem;
+        margin-left: 3.125rem; 
+        margin-top: 10rem;
+    }   
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY DESKTOP MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+
+@include desktop{
+    .textoMiembro {
+        width: 100%;
+        max-width: none; 
+        text-align: center;
+        background-color: $light-color;
+        h2 {
+        
+            background-color: $light-color; 
+            text-align: center;
+            width: 100%; 
+            max-width: 100%; 
+        }
+        p{
+            margin: 0 50px;
+            
+        }
+    }
+/* <-------------------------------------------------------------------------ESTILOS DESKTOP MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+    
+    .miembro {
+        background-color: $light-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        img {
+            max-width: 400px;
+            width: 60.5rem; 
+            height: auto; 
+            object-fit: contain;
+            margin-right: 0.625rem;
+            margin-left: 3.125rem; 
+            margin-top: 10rem;
+        }
+    }
+}    
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+    
+@include tablet {
+    .textoMiembro {
+        max-width: 90%; 
+        padding: 20px;
+        h2 {
+            font-size: 2.5em;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 2.0em;
+        }
+        p {
+            font-size: 1.7em;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+    }
+    
+    .miembro {
+        flex-direction: column; 
+        img {
+            max-width: 80%; 
+            margin-top: 5rem;
+        }
+    }
+}
+    

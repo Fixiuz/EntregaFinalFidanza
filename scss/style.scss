@@ -1,0 +1,18 @@
+//imports 
+@import "base/reset";
+@import "base/header";
+
+@import "base/home";
+
+@import "base/footer";
+@import "base/contacto";
+@import "base/portfolio";
+@import "base/servicios";
+@import "base/equipo";
+@import "utilidades/mixin";
+
+html, body {
+    overflow-x: hidden;
+  }
+  
+

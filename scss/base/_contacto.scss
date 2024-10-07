@@ -1,0 +1,183 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+/* <-------------------------------------------------------------------------ESTILOS FORMULARIO DE CONTACTO--------------------------------------------------------------------------------------------->*/
+
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: $light-color;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: $font-base;
+    .prueba{
+            h2{
+                
+                color: $primary-color;
+                font-weight: bold;
+                font-family: $font-base;     
+            }
+            h3{
+                color: $primary-color;
+                font-family: $font-base;
+
+            }
+            p{
+                color: $secondary-color;
+                font-family: $font-alt;
+            }
+
+            
+    }
+    
+    fieldset{
+        border: none;
+        padding: 0;
+        margin-bottom: 15px;
+        
+        div{
+            margin-bottom: 10px;
+            label{
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+                color: $primary-color;                
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            textarea {   
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $primary-color;
+                border-radius: 5px;
+                font-size: 1em;
+                box-sizing: border-box;
+                background-color: $light-color;
+                color: #333;
+                &:focus {
+                    border-color: $secondary-color;
+                    outline: none;
+                  }                                
+            }
+            textarea {
+                height: 100px;
+                resize: vertical;
+            }         
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: $primary-color;
+            color: $light-color;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+            &:hover {
+                background-color: $secondary-color;
+            }
+            &:active {
+                background-color: grey;
+            }            
+        }                        
+    }    
+}
+.mapa {
+    width: 100%; 
+    height: auto;
+    margin: 10px auto;
+
+    iframe {
+      width: 100%; 
+      height: 300px;
+      border: 0;
+    }
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY DESKTOP FORMULARIO DE CONTACTO-------------------------------------------------------------------------------------------->*/
+
+@include desktop {
+    .form {
+        flex-direction: row;
+        max-width: 800px;
+        justify-content: space-between;
+        .prueba {
+            position: absolute; 
+            left: 0; 
+            margin-left: 50px;
+            padding: 20px; 
+            
+            
+        }
+
+        fieldset {
+            flex: 1;
+            margin-right: 20px;
+
+            input[type="submit"],
+            input[type="reset"] {
+                margin-top: 20px;
+            }
+        }
+    }
+}    
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET FORMULARIO DE CONTACTO-------------------------------------------------------------------------------------------->*/
+    
+@include tablet {
+    .form {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 20px;
+    
+        .prueba{
+            h2 {
+                font-size: 2em;
+            }
+            h3 {
+                font-size: 1.8em;
+
+            }
+            p {
+                font-size: 1.5em;
+            }
+        }
+        fieldset {
+            width: 100%;
+            margin-right: 0;
+            div{
+                label {
+                    font-size: 1.5em;
+                }
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                margin-top: 15px;
+                width: 100%;
+                font-size: 1.5em;
+            }
+    
+            input[type="text"],
+            input[type="password"],
+            input[type="email"] 
+
+            textarea {
+                font-size: 3em;
+            
+            }
+        }
+    }
+    
+    .mapa {
+        width: 100%; 
+        iframe {
+            width: 100%; 
+            height: 400px;
+        }
+    }
+}
+    
+    

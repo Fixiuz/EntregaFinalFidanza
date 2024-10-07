@@ -1,0 +1,992 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* <--------------------------------------------------------------------------ESTILOS DEL MENÚ DE BOOTSTRAP--------------------------------------------------------------------------------------------->*/
+header {
+  /* <--------------------------------------------------------------------------MEDIA QUERY DESKTOP MENÚ--------------------------------------------------------------------------------------------->*/
+  /* <--------------------------------------------------------------------------MEDIA QUERY TABLET MENÚ--------------------------------------------------------------------------------------------->*/
+}
+header .navbar {
+  background-image: url("../img/logos/logotipoMobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header .navbar .container-fluid {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+header .navbar .navbar-toggler {
+  position: absolute;
+  align-self: flex-end;
+  background-color: #125f9e;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+header .navbar .navbar-nav {
+  margin-left: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  gap: 10px;
+  text-align: right;
+  margin-right: 8px;
+  margin-top: 60px;
+}
+header .navbar .navbar-nav .nav-link {
+  color: #203959;
+  text-transform: uppercase;
+}
+header .navbar .navbar-nav .nav-link:hover {
+  color: #125f9e;
+  border-radius: 5%;
+  transform: scale(1.2);
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #f7f9fc;
+  margin-right: 20px;
+}
+header .navbar .navbar-nav .nav-link:active {
+  background-color: #f7f9fc;
+}
+@media (min-width: 1024px) {
+  header .container-fluid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  header .navbar {
+    background-image: url("../img/logos/logotipoDesktop.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+  }
+  header .navbar-nav {
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+  }
+  header .navbar-nav .nav-link {
+    font-size: 1.2em;
+    color: #203959;
+  }
+  header .navbar-nav .nav-link:hover {
+    color: #125f9e;
+    background-color: transparent !important;
+    font-weight: bold;
+  }
+  header #navbarSupportedContent.show {
+    background-color: whitesmoke; /* Fondo blanco */
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header .container-fluid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  header .navbar {
+    background-image: url("../img/logos/logotipoDesktop.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+  }
+  header .navbar-toggler {
+    position: relative;
+    margin-top: 0;
+    margin-right: 10px;
+    background-color: #125f9e;
+  }
+  header .navbar-nav {
+    margin-right: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+  }
+  header .navbar-nav .nav-link {
+    font-size: 1.2em;
+    color: #203959;
+  }
+  header .navbar-nav .nav-link:hover {
+    color: #125f9e;
+    transform: scale(1.2);
+    font-weight: bold;
+  }
+}
+
+/* <--------------------------------------------------------------------------ESTILOS MAIN--------------------------------------------------------------------------------------------->*/
+main {
+  background-color: #f7f9fc;
+  height: auto;
+  /* <-------------------------------------------------------------------------ESTILOS DEL H1-------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------ESTILOS TEXTO1-------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------ESTILOS LISTA HTML HOME-------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------MEDIAQUERY DEKTOP HTML HOME-------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------MEDIAQUERY TABLET HTML HOME-------------------------------------------------------------------------------------------->*/
+}
+main h1 {
+  text-align: center;
+  background-image: radial-gradient(grey, #203959, #203959);
+  color: #f7f9fc;
+  border-radius: 5px;
+  border: 5px solid #125f9e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+main .texto1 {
+  /* <-------------------------------------------------------------------------ESTILOS CONTENEDORSERVICIOS-------------------------------------------------------------------------------------------->*/
+  background-color: #f7f9fc;
+  color: #4d4d4d;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  /* <-------------------------------------------------------------------------ESTILOS ETIQUETA P TEXTO1-------------------------------------------------------------------------------------------->*/
+}
+main .texto1 h2 {
+  font-size: 2em;
+  color: #203959;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+main .texto1 p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #203959;
+}
+main .lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+  /* <-------------------------------------------------------------------------ESTILOS H2 LISTA HTML HOME-------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------ESTILOS IMG SEPARADORA OCULTA EN MOBILE HTML HOME-------------------------------------------------------------------------------------------->*/
+}
+main .lista .card {
+  width: 600px;
+  height: 400px;
+  perspective: 1000px;
+  border-radius: 10%;
+}
+main .lista .card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+main .lista .card .card-inner .card:hover .card-inner {
+  transform: rotate(180deg);
+}
+main .lista .card .card-inner .card-front, main .lista .card .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+main .lista .card .card-inner .card-front {
+  display: flex;
+  transform: rotateY(0deg);
+}
+main .lista .card .card-inner .card-front img {
+  width: 600px;
+  height: 400px;
+  border-radius: 10%;
+}
+main .lista .card .card-inner .card-back {
+  background-color: #1C1C1C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transform: rotateY(180deg);
+  border-radius: 10%;
+}
+main .lista .card .card-inner .card-back p {
+  width: 100vw;
+  color: #f7f9fc;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 20px;
+  color: #BA9A57;
+}
+main .lista .card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+main .lista h2 {
+  color: #203959;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+main .lista .separador {
+  display: none;
+}
+@media (min-width: 1024px) {
+  main .texto1 {
+    max-width: 800px;
+  }
+  main .lista {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    margin-left: 50px;
+  }
+  main .lista .card {
+    width: 500px;
+    height: 350px;
+  }
+  main .lista .card .card-inner {
+    width: 100%;
+    height: 100%;
+  }
+  main .lista .card .card-inner .card-front img {
+    width: 500px;
+    height: 350px;
+  }
+  main .lista .separador {
+    display: block;
+    background-image: url(../img/home/separador.webp);
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/span 3;
+    height: 80vh;
+    opacity: 80%;
+    margin-left: -50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .texto1 {
+    max-width: 90%;
+  }
+  main .texto1 h2 {
+    font-size: 2em;
+  }
+  main .texto1 p {
+    font-size: 1.5em;
+  }
+  main .lista {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    justify-content: center;
+    margin-left: 20%;
+  }
+  main .lista .card {
+    width: 500px;
+    height: 400px;
+  }
+  main .lista .card .card-inner {
+    width: 100%;
+    height: 100%;
+  }
+  main .lista .card .card-inner .card-front img {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+/* <--------------------------------------------------------------------------ESTILOS FOOTER--------------------------------------------------------------------------------------------->*/
+footer {
+  background-image: linear-gradient(to left, #203959, #125f9e);
+  color: #f7f9fc;
+  margin-top: 20px;
+  border-top: solid 2px #125f9e;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: bold;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  height: auto;
+  /* <--------------------------------------------------------------------------BOTON DE SUBIR--------------------------------------------------------------------------------------------->*/
+}
+footer p {
+  margin: 0;
+}
+footer button {
+  font-size: 17px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #203959;
+  color: #f7f9fc;
+  border: 0.2px solid #125f9e;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+footer .gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+footer .label {
+  position: relative;
+  top: -1px;
+}
+footer .transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #125f9e;
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+footer button:hover .transition {
+  width: 14em;
+  height: 14em;
+}
+footer button:active {
+  transform: scale(0.97);
+}
+
+/* <-------------------------------------------------------------------------ESTILOS FORMULARIO DE CONTACTO--------------------------------------------------------------------------------------------->*/
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.form .prueba h2 {
+  color: #203959;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+.form .prueba h3 {
+  color: #203959;
+  font-family: "Montserrat", sans-serif;
+}
+.form .prueba p {
+  color: #125f9e;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.form fieldset div {
+  margin-bottom: 10px;
+}
+.form fieldset div label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #203959;
+}
+.form fieldset div input[type=text],
+.form fieldset div input[type=password],
+.form fieldset div input[type=email],
+.form fieldset div textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #203959;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #f7f9fc;
+  color: #333;
+}
+.form fieldset div input[type=text]:focus,
+.form fieldset div input[type=password]:focus,
+.form fieldset div input[type=email]:focus,
+.form fieldset div textarea:focus {
+  border-color: #125f9e;
+  outline: none;
+}
+.form fieldset div textarea {
+  height: 100px;
+  resize: vertical;
+}
+.form fieldset input[type=submit],
+.form fieldset input[type=reset] {
+  background-color: #203959;
+  color: #f7f9fc;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 10px;
+}
+.form fieldset input[type=submit]:hover,
+.form fieldset input[type=reset]:hover {
+  background-color: #125f9e;
+}
+.form fieldset input[type=submit]:active,
+.form fieldset input[type=reset]:active {
+  background-color: grey;
+}
+
+.mapa {
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* <-------------------------------------------------------------------------MEDIAQUERY DESKTOP FORMULARIO DE CONTACTO-------------------------------------------------------------------------------------------->*/
+@media (min-width: 1024px) {
+  .form {
+    flex-direction: row;
+    max-width: 800px;
+    justify-content: space-between;
+  }
+  .form .prueba {
+    position: absolute;
+    left: 0;
+    margin-left: 50px;
+    padding: 20px;
+  }
+  .form fieldset {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .form fieldset input[type=submit],
+  .form fieldset input[type=reset] {
+    margin-top: 20px;
+  }
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET FORMULARIO DE CONTACTO-------------------------------------------------------------------------------------------->*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .form {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
+  }
+  .form .prueba h2 {
+    font-size: 2em;
+  }
+  .form .prueba h3 {
+    font-size: 1.8em;
+  }
+  .form .prueba p {
+    font-size: 1.5em;
+  }
+  .form fieldset {
+    width: 100%;
+    margin-right: 0;
+  }
+  .form fieldset div label {
+    font-size: 1.5em;
+  }
+  .form fieldset input[type=submit],
+  .form fieldset input[type=reset] {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .form fieldset input[type=text],
+  .form fieldset input[type=password],
+  .form fieldset input[type=email] textarea {
+    font-size: 3em;
+  }
+  .mapa {
+    width: 100%;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+/* <--------------------------------------------------------------------------ESTILOS PORFOLIO--------------------------------------------------------------------------------------------->*/
+/* <--------------------------------------------------------------------------ESTILOS BLOQUE EXPERENCIENCIA--------------------------------------------------------------------------------------------->*/
+.textoUno h2 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #1f2c66;
+  margin: 20px 0;
+  font-weight: bold;
+}
+.textoUno p {
+  text-align: center;
+  width: 85%;
+  color: #203959;
+  margin-left: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.bloqueExp {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.bloqueExp .exp {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  background-color: #f7f9fc;
+  padding: 10px;
+  color: #203959;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  border-radius: 10%;
+}
+.bloqueExp .exp img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.bloqueExp .exp .imgDesktop {
+  display: none;
+}
+.bloqueExp .exp .texto2 {
+  background-color: #f7f9fc;
+  color: #203959;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+.bloqueExp .exp .texto2 h2 {
+  font-size: 1.5em;
+  color: #125f9e;
+  margin-bottom: 30px;
+  background-color: #f7f9fc;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 10px;
+  font-weight: bold;
+}
+.bloqueExp .exp .texto2 p {
+  font-size: 1em;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 40px;
+  color: #1f2c66;
+}
+
+/* <--------------------------------------------------------------------------MEDIAQUERY DESKTOP PORTFOLIO--------------------------------------------------------------------------------------------->*/
+@media (min-width: 1024px) {
+  .textoUno h2 {
+    font-weight: bold;
+  }
+  .textoUno p {
+    font-size: 1.4em;
+    width: 50%;
+    margin-left: 25%;
+  }
+  .bloqueExp .exp {
+    flex-direction: row;
+    text-align: center;
+    height: 500px;
+    margin-right: 50px;
+    justify-content: right;
+  }
+  .bloqueExp .exp .imgDesktop {
+    display: block;
+    max-width: 600px;
+    object-fit: contain;
+    margin-right: 20px;
+    margin-left: 50px;
+    width: 100%;
+  }
+  .bloqueExp .exp .imgMobile {
+    display: none;
+  }
+  .bloqueExp .exp .texto2 {
+    max-width: 70%;
+  }
+  .bloqueExp .exp .texto2 h2 {
+    font-size: 2em;
+    margin-bottom: 50px;
+    width: 80%;
+    text-align: center;
+    margin-left: 50px;
+    color: #125f9e;
+  }
+  .bloqueExp .exp .texto2 p {
+    font-size: 1.2em;
+    width: 100%;
+  }
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET PORTFOLIO--------------------------------------------------------------------------------------------->*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .textoUno h2 {
+    font-size: 2em;
+  }
+  .textoUno p {
+    font-size: 1.5em;
+  }
+  .bloqueExp .exp {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .bloqueExp .exp .imgDesktop {
+    display: none;
+  }
+  .bloqueExp .exp .imgMobile {
+    display: block;
+    max-width: 90%;
+    height: auto;
+  }
+  .bloqueExp .exp .texto2 {
+    max-width: 90%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .bloqueExp .exp .texto2 h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  .bloqueExp .exp .texto2 h3 {
+    font-size: 20px;
+    margin-right: 0;
+  }
+  .bloqueExp .exp .texto2 p {
+    font-size: 1.5em;
+  }
+}
+/* <-------------------------------------------------------------------------ESTILOS HTL DE SERVICIOS-------------------------------------------------------------------------------------------->*/
+/* <-------------------------------------------------------------------------ESTILOS TEXTOSERVICIO------------------------------------------------------------------------------------------->*/
+.textoServicio h2 {
+  font-size: 3em;
+  color: #1f2c66;
+  text-align: center;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.textoServicio h3 {
+  display: none;
+  font-weight: bold;
+  font-size: 2em;
+  color: #125f9e;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  background-color: #f7f9fc;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.textoServicio p {
+  font-size: 1.1em;
+  margin: 20px 20px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #203959;
+}
+
+/* <-------------------------------------------------------------------------ESTILOS TITULOSERVICIO-------------------------------------------------------------------------------------------->*/
+.tituloServicio h3 {
+  font-size: 2em;
+  color: #125f9e;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  background-color: #f7f9fc;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+/* <-------------------------------------------------------------------------ESTILOS CONTENEDORSERVICIOS-------------------------------------------------------------------------------------------->*/
+.contenedorServicios {
+  height: 1000vh;
+  background-color: #f7f9fc;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+.contenedorServicios img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+/* <-------------------------------------------------------------------------MEDIAQUERY DESKTOP HTML SERVICIOS-------------------------------------------------------------------------------------------->*/
+@media (min-width: 1024px) {
+  .tituloServicio {
+    display: none;
+  }
+  .textoServicio {
+    width: 100%;
+    text-align: left;
+  }
+  .textoServicio h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .textoServicio h3 {
+    width: 70%;
+    display: block;
+    font-size: 2.5em;
+    color: #125f9e;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+  .textoServicio p {
+    width: 70%;
+    margin-left: 0;
+    text-align: center;
+    padding: 5px;
+    margin-right: 70px;
+  }
+  .contenedorServicios {
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+  .contenedorServicios .servicioUno, .contenedorServicios .servicioDos, .contenedorServicios .servicioTres, .contenedorServicios .servicioCuatro, .contenedorServicios .servicioCinco, .contenedorServicios .servicioSeis {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: right;
+    width: 100%;
+  }
+  .contenedorServicios img {
+    width: 400px;
+    height: 50%;
+    object-fit: contain;
+    justify-content: left;
+    margin-left: 20px;
+  }
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET HTML SERVICIOS-------------------------------------------------------------------------------------------->*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .tituloServicio {
+    display: none;
+  }
+  .textoServicio {
+    width: 100%;
+    text-align: center;
+  }
+  .textoServicio h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  .textoServicio h3 {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    width: 80%;
+    color: #125f9e;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 70px;
+  }
+  .textoServicio p {
+    width: 80%;
+    margin-left: 60px;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #203959;
+  }
+  .contenedorServicios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+  .contenedorServicios .servicioUno, .contenedorServicios .servicioDos, .contenedorServicios .servicioTres, .contenedorServicios .servicioCuatro, .contenedorServicios .servicioCinco, .contenedorServicios .servicioSeis {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+  .contenedorServicios img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    justify-content: left;
+    margin-left: 0;
+  }
+}
+/* <-------------------------------------------------------------------------eSTILOS MIENBROS DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+/* <-------------------------------------------------------------------------ESTILOS CLASS TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+.textoMiembro {
+  background-color: #f7f9fc;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: center;
+  /* <-------------------------------------------------------------------------ESTILOS H2 TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------ESTILOS H3 TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+  /* <-------------------------------------------------------------------------ESTILOS ETIQUETA P TEXTOMIEMBRO--------------------------------------------------------------------------------------------->*/
+}
+.textoMiembro h2 {
+  font-size: 2em;
+  color: #1f2c66;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  opacity: 90%;
+}
+.textoMiembro h3 {
+  font-size: 2em;
+  color: #125f9e;
+}
+.textoMiembro p {
+  font-size: 20px;
+  color: #203959;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* <-------------------------------------------------------------------------TITULO OCULTO PARA MOBILE--------------------------------------------------------------------------------------------->*/
+.tituloMiembro {
+  display: none;
+}
+
+/* <-------------------------------------------------------------------------ESTILOS MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+.miembro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f9fc;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  /* <-------------------------------------------------------------------------ESTILOS IMG MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+}
+.miembro img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-right: 3.125rem;
+  margin-left: 3.125rem;
+  margin-top: 10rem;
+}
+
+/* <-------------------------------------------------------------------------MEDIAQUERY DESKTOP MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+@media (min-width: 1024px) {
+  .textoMiembro {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    background-color: #f7f9fc;
+  }
+  .textoMiembro h2 {
+    background-color: #f7f9fc;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .textoMiembro p {
+    margin: 0 50px;
+  }
+  /* <-------------------------------------------------------------------------ESTILOS DESKTOP MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+  .miembro {
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .miembro img {
+    max-width: 400px;
+    width: 60.5rem;
+    height: auto;
+    object-fit: contain;
+    margin-right: 0.625rem;
+    margin-left: 3.125rem;
+    margin-top: 10rem;
+  }
+}
+/* <-------------------------------------------------------------------------MEDIAQUERY TABLET MIEMBRO DEL EQUIPO--------------------------------------------------------------------------------------------->*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .textoMiembro {
+    max-width: 90%;
+    padding: 20px;
+  }
+  .textoMiembro h2 {
+    font-size: 2.5em;
+    padding-bottom: 8px;
+  }
+  .textoMiembro h3 {
+    font-size: 2em;
+  }
+  .textoMiembro p {
+    font-size: 1.7em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .miembro {
+    flex-direction: column;
+  }
+  .miembro img {
+    max-width: 80%;
+    margin-top: 5rem;
+  }
+}
+html, body {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

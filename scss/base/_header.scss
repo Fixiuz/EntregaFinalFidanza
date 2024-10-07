@@ -1,0 +1,149 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+/* <--------------------------------------------------------------------------ESTILOS DEL MENÚ DE BOOTSTRAP--------------------------------------------------------------------------------------------->*/
+
+header {
+  .navbar {
+    background-image: url('../img/logos/logotipoMobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .container-fluid {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column; 
+      justify-content: flex-start; 
+      align-items: flex-end;
+    }
+    
+
+    .navbar-toggler {
+      position: absolute;
+      align-self: flex-end;
+      background-color: $secondary-color;
+      margin-top: 8px;
+      margin-right: 10px;
+
+
+    }
+    .navbar-nav {
+      margin-left: 0;
+      font-family: $font-base;
+      font-weight: bold;
+      gap: 10px;
+      text-align: right;
+      margin-right: 8px;
+      margin-top: 60px;
+      
+
+      .nav-link {
+        color: $primary-color ;
+        text-transform: uppercase;
+        
+        
+
+        &:hover {
+          color: $secondary-color;
+          border-radius: 5%;
+          transform: scale(1.2); 
+          font-weight: bold;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+          background-color: $light-color;
+          margin-right: 20px;
+        }
+        &:active{
+          background-color: $light-color;
+        }
+        
+      }
+
+        
+    }
+  }
+
+/* <--------------------------------------------------------------------------MEDIA QUERY DESKTOP MENÚ--------------------------------------------------------------------------------------------->*/
+@include desktop {
+    .container-fluid {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: flex-end; 
+    }
+
+    .navbar {
+        background-image: url('../img/logos/logotipoDesktop.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-items: flex-end;
+    }
+
+    .navbar-nav {
+        margin-left: auto; 
+        justify-content: flex-end; 
+        align-items: center;
+        gap: 15px; 
+
+        .nav-link {
+            font-size: 1.2em;
+            color: $primary-color;
+            &:hover {
+                color: $secondary-color; 
+                background-color: transparent !important; 
+                font-weight: bold;
+            }
+        }
+    }
+    #navbarSupportedContent.show {
+      background-color: whitesmoke; /* Fondo blanco */
+  }
+}
+/* <--------------------------------------------------------------------------MEDIA QUERY TABLET MENÚ--------------------------------------------------------------------------------------------->*/
+
+  @include tablet {
+    .container-fluid {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 0 20px;
+    }
+
+    .navbar {
+        background-image: url('../img/logos/logotipoDesktop.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        margin-top: 0;
+        margin-right: 10px;
+        background-color: $secondary-color;
+    }
+
+    .navbar-nav {
+        margin-right: 20px; 
+        justify-content: flex-end; 
+        align-items: center;
+        gap: 15px;
+
+        .nav-link {
+            font-size: 1.2em;
+            color: $primary-color;
+            &:hover {
+                color: $secondary-color;
+                transform: scale(1.2); 
+                font-weight: bold;
+            }
+        }
+    }
+  }
+
+}
+
+
+
